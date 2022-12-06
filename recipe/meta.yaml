@@ -1,5 +1,5 @@
 {% set name = "psmpy" %}
-{% set version = "0.3.5" %}
+{% set version = "0.3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/psmpy-{{ version }}.tar.gz
-  sha256: 9ade8696a8c1c5704af19e7fa245e8d2941f2411e3833b4328a9688e1b4806c3
+  sha256: 8946a78fbe86780c8f03a17885a4e501422202b3f8367e5b3df00d417ac3e8f5
   patches:
     - 0001-fix-imports.patch
 
