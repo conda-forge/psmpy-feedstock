@@ -1,13 +1,13 @@
 {% set name = "psmpy" %}
-{% set version = "0.3.13" %}
+{% set version = "0.3.14" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/psmpy-{{ version }}.tar.gz
-  sha256: 13dcda62a6745ec53d2ee6834e987f50415f8cb21e1a1d47bc8a9fd2daf317d4
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/psmpy-{{ version }}.tar.gz
+  sha256: 58ede4d31208f9f0684891a21d72a244cf1cf9e500f427077919c689083d0b47
 
 build:
   noarch: python
