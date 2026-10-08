@@ -1,0 +1,51 @@
+schema_version: 1
+
+context:
+  version: 0.3.16
+
+package:
+  name: psmpy
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/p/psmpy/psmpy-${{ version }}.tar.gz
+  sha256: 67628f909cc7b72629a611ea09e88802342793c92b7dbd44b32e0afb535e7aa4
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools
+    - wheel
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - matplotlib-base
+    - numpy
+    - pandas
+    - seaborn
+    - scikit-learn
+    - scipy
+
+tests:
+  - python:
+      imports:
+        - psmpy
+      pip_check: true
+      python_version:
+      - ${{ python_min }}.*
+      - '*'
+
+about:
+  summary: Propensity score matching for python and graphical plots
+  license: MIT
+  license_file: LICENSE.txt
+  homepage: https://pypi.org/project/psmpy/
+
+extra:
+  recipe-maintainers:
+    - dillonroach
